@@ -9,23 +9,23 @@ import SignupForm from './SignupForm';
 const LandingPage = () => {
   return (
     <div className="landing-container">
+      <div className='hero-background'>
+        <nav>
+          <img className='logo' src={logo} alt="" />
+        </nav>
 
-      <nav>
-        <img className='logo' src={logo} alt="" />
-      </nav>
-
-      <section className="hero">
-        <div className="hero-text">
-          <h1>Boost Your Snacks with Protein</h1>
-          <p>Enjoy guilt-free indulgence with our all-natural, high-protein treats. Join our waitlist today for exclusive early access and special offers!</p>
-          <SignupForm/>
-        </div>
-        <div className="hero-image">
-          {/* Placeholder for an image. Replace with your actual image path */}
-          <img src={heroImg} alt="High-Protein Snack Balls" />
-        </div>
-      </section>
-
+        <section className="hero">
+          <div className="hero-text">
+            <h1>Boost Your Snacks with Protein</h1>
+            <p>Enjoy guilt-free indulgence with our all-natural, high-protein treats. Join our waitlist today for exclusive early access and special offers!</p>
+            <SignupForm/>
+          </div>
+          <div className="hero-image">
+            {/* Placeholder for an image. Replace with your actual image path */}
+            <img src={heroImg} alt="High-Protein Snack Balls" />
+          </div>
+        </section>
+      </div>
       {/*<div className="border"></div>*/}
       
       <section className="features">
