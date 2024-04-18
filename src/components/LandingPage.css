@@ -21,7 +21,7 @@
   
 
   .logo {
-    padding-top: 20px;
+    padding-top: 20px; 
     width: 200px;
   }
   
@@ -31,10 +31,18 @@
     align-items: center;
     /*gap: 20px*/ /* Adjust the gap between text and image as needed */
     width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 
   .hero-text {
     min-width: 450px;
+    max-width: 700px;
+    width: 50%;
+    
+  }
+
+  .hero-image {
     width: 50%;
   }
 
@@ -42,19 +50,15 @@
     width: 100%;
     margin: 0;
     margin-bottom: 1.5rem;
-    font-size: 4rem;
+    font-size: 4.3rem;
   }
 
   .hero-text p {
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
   }
   
-  .hero-text, .hero-image {
-    flex: 1; /* This ensures that the text and image take up equal space */
-    padding: 30px; /* Adjust padding as needed for spacing */
-  }
 
 .signup-container {
   display: flex;
@@ -70,7 +74,7 @@
 
 .signup-container p{ 
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-align: center;
   font-weight: 600;
 }
@@ -78,22 +82,17 @@
 /* Input field styles */
 .signup-container input[type="email"] {
   padding: 20px;
-  font-size: 16px;
+  font-size: 1.2rem;
   border: none; /* Subtle border */
   border-radius: 50px; /* Rounded corners for the input */
   outline: none; /* Remove the default focus outline */
 }
 
-/* Input field focus styles */
-.signup-container input[type="email"]:focus {
-  /*border-color: #38b6ff; *//* Highlight color when focused */
-  box-shadow: 0 0 0 2px rgba(56, 182, 255, 0.5); /* Soft glow effect */
-}
 
 /* Button styles */
 .signup-container button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1.2rem;
   border-radius: 50px;
   color: white; /* Text color */
   background-color: #FA7070; /* Button color to match your site's theme */
@@ -105,20 +104,23 @@
 /* Button hover and focus styles */
 .signup-container button:hover,
 .signup-container button:focus {
-  background-color: #c85a5a; /* Darker shade on hover/focus */
+  outline: none;
+  background-color: #e16565;
 }
 
 /* Ensuring accessibility */
 .signup-container input[type="email"]:focus-visible {
-  /*outline: 2px solid #38b6ff;*/ /* Ensuring the outline is visible for accessibility */
+  outline: none;
 }
 
   
   /* Ensuring the image doesn't exceed its container's bounds */
   .hero-image img {
+    min-width: 400px;
     width: 100%;
     max-width: 600px; /* Adjust based on your preference */
     height: auto; /* Maintain aspect ratio */
+   
   }
 
   .features {
@@ -136,32 +138,19 @@
     max-width: 450px;
   }
 
-  .sign-up {
-    width: 100%;
-    padding: 40px 30px;
-    background-color: rgba(185, 137, 97,.25);
+  .feature h2 {
+    font-size: 2rem;
   }
-  
-  .sign-up form {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+
+  .feature p {
+    font-size: 1.2rem;
   }
-  
-  .sign-up input {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .sign-up button {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #CF7D2D;
-  }
+
+
   
   /* Existing styles for .hero, .hero-text, and .hero-image */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero {
       flex-direction: column;
       text-align: center; /* Center-align text for mobile */
@@ -175,15 +164,15 @@
     }
 
     .hero-text h1 {
-      font-size: 3rem;
+      font-size: 4rem;
     }
 
     .hero-text p {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   
     .hero-image img {
-      max-width: 60%; /* Allow the image to fill the container but not exceed it */
+      /* Allow the image to fill the container but not exceed it */
       height: auto; /* Maintain aspect ratio */
     }
   
@@ -192,6 +181,7 @@
       flex-direction: column;
       align-items: center; /* Stack features vertically and align them centrally */
     }
+
   
     /* If using Flexbox for other sections, you may want to make similar adjustments */
   }
